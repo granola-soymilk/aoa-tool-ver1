@@ -4289,6 +4289,9 @@
         // Add these functions near the start of your script
         function processInWebWorker() {
             const workerPath = 'https://granola-soymilk.github.io/aoa-tool-ver1/ffmpeg_asm.js';
+
+            console.log('Loading ffmpeg-asm.js from:', workerPath); // Debug log
+            
             const blob = URL.createObjectURL(new Blob([`
                 importScripts("${workerPath}");
                 var now = Date.now;
